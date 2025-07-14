@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2><span id="href"></span></h2>
+    <h2>Protocol -<span id="protocol"></span></h2>
+    <h2>Hostname -<span id="hostname"></span></h2>
+    <h2>Port -<span id="port"></span></h2>
+    <h2>Pathname -<span id="pathname"></span></h2>
+    <button onclick="send()">click</button>
+
+    <script>
+      let href = document.getElementById("href");
+      let protocol = document.getElementById("protocol");
+      let hostname = document.getElementById("hostname");
+      let port = document.getElementById("port");
+      let pathname = document.getElementById("pathname");
+
+      function send() {
+        fetch("http://localhost:3000", {
+          method: "POST",
+
+          body: JSON.stringify({
+            href: location.href,
+            protocol: location.protocol,
+            hostname: location.hostname,
+            port: location.port,
+            pathname: location.pathname,
+          }),
+        })
+          .then((res) => res.text())
+          .then((msg) => console.log(msg));
+      }
+
+      //   href.innerText = location.href; // Gets/sets the whole URL
+      //   protocol.innerText = location.protocol; // "https:"
+      //   hostname.innerText = location.hostname; // "example.com"
+      //   port.innerText = location.port; // "443"
+      //   pathname.innerText = location.pathname; // "/page"
+    </script>
+  </body>
+</html>
