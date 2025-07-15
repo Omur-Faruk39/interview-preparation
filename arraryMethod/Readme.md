@@ -12,6 +12,12 @@ Iterated methods are used to loop through elements in an array and perform speci
 - **map()**
 - **filter()**
 - **reduce()**
+- **every()**
+- **some()**
+- **reverse()**
+- **flatMap()**
+
+these are the most populer Iterated methods
 
 #### Example Usage:
 
