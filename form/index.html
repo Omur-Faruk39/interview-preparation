@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="contact-form">
+      <h2>Contact Us</h2>
+
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required minlength="2" />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <fieldset>
+        <legend>Preferred Contact Method:</legend>
+        <label
+          ><input type="radio" name="contact" value="email" checked />
+          Email</label
+        >
+        <label><input type="radio" name="contact" value="phone" /> Phone</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Topics of Interest:</legend>
+        <label
+          ><input type="checkbox" name="topics" value="frontend" />
+          Frontend</label
+        >
+        <label
+          ><input type="checkbox" name="topics" value="backend" />
+          Backend</label
+        >
+        <label
+          ><input type="checkbox" name="topics" value="devops" /> DevOps</label
+        >
+      </fieldset>
+
+      <label for="country">Country:</label>
+      <select id="country" name="country">
+        <option value="">--Select--</option>
+        <option value="bd">Bangladesh</option>
+        <option value="jp">Japan</option>
+        <option value="us">United States</option>
+      </select>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+  </body>
+</html>
