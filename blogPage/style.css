@@ -51,17 +51,16 @@ header img {
   height: 40px;
   width: 40px;
   border-radius: 20px;
+  outline: #007bff 4px solid;
 }
 
 @media screen and (max-width: 600px) {
   header div {
     display: none;
-
   }
   header {
     justify-content: center;
   }
-  
 }
 
 .main-content {
