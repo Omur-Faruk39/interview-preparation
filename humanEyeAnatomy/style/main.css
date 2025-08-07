@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --secondary-color: #fefefe;
+  --text-color: rgb(48, 48, 48);
+
+  --shadow: 10px 10px 22px rgba(0, 0, 0, 0.2),
+    -10px -10px 22px rgba(255, 255, 255, 0.75);
+}
+
+main {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr minmax(350px, 900px);
+  gap: 2rem;
+}
+
+.article {
+  color: var(--text-color);
+  background-color: var(--secondary-color);
+  padding: 1rem;
+}
+
+.article h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.article article {
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  color: var(--text-color);
+}
+
+.anatomy-images {
+  position: relative;
+}
+
+.anatomy-images > img {
+  max-width: 100%;
+  min-width: 300px;
+  padding-bottom: 2rem;
+}
+
+.anatomy-front {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.anatomy-front > img {
+  max-width: 100%;
+  padding-top: 2rem;
+  display: block;
+  margin: 0 auto;
+}
+
+.btn {
+  background-color: transparent;
+  border: none;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.cornea {
+  position: absolute;
+  top: 14%;
+  left: 4.5%;
+  z-index: 10;
+}
+.cornea-f {
+  position: absolute;
+  top: 17%;
+  left: 80%;
+  z-index: 10;
+}
+
+.pupil {
+  position: absolute;
+  top: 3%;
+  left: 13%;
+  z-index: 10;
+}
+.pupil-f {
+  position: absolute;
+  top: 12%;
+  left: 10%;
+  z-index: 10;
+}
+
+.lens {
+  position: absolute;
+  top: 68%;
+  left: 6%;
+  z-index: 10;
+}
+
+.muscle {
+  position: absolute;
+  top: 79%;
+  left: 5%;
+  z-index: 10;
+}
+
+.choroid {
+  position: absolute;
+  top: 4%;
+  left: 82%;
+  z-index: 10;
+}
+
+.retina {
+  position: absolute;
+  top: 16%;
+  left: 84%;
+  z-index: 10;
+}
+
+.optic-nerve {
+  position: absolute;
+  top: 75%;
+  left: 80%;
+  z-index: 10;
+}
+
+.vitreous-body {
+  position: absolute;
+  top: 85%;
+  left: 70%;
+  z-index: 10;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: -100vw;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 20;
+  animation: forwards fadeIn 0.3s ease-in-out;
+  display: none;
+}
+
+.active {
+  display: flex;
+  overflow-y: auto;
+}
+
+.active > div {
+  max-width: 400px;
+  display: grid;
+  margin: 2rem auto;
+  padding: 1rem;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.modal-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.active > div > div > img {
+  max-width: 550px;
+}
+
+@keyframes fadeIn {
+  from {
+    left: -100vw;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .res {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  .res {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .res {
+    font-size: 16px;
+  }
+
+  main {
+    grid-template-columns: 1fr;
+    padding: 0;
+    gap: 0.2rem;
+  }
+  .anatomy-images img {
+    padding: 0;
+    max-width: 100%;
+  }
+}
+
+.close {
+  position: absolute;
+  top: 3rem;
+  right: 5%;
+  background-color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+}
