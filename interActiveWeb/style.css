@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: Arial, sans-serif;
   display: flex;
@@ -49,5 +55,5 @@ button:hover {
   margin-top: 20px;
   font-size: 1.2em;
   color: #555;
-  min-height: 2em; /* Ensures the space is reserved */
+  min-height: 2em;
 }
