@@ -17,3 +17,11 @@ All HTML tags can be divided into two categories: empty tags and container tags.
 Finally, every HTML element can have attributes. Attributes are like superpowers that enable elements to access various features such as styling, classes, IDs, and more. While HTML is primarily used to define the structure of a webpage—not its appearance—you can apply styles directly using the style attribute. Additionally, class and id attributes are commonly used to select and manipulate elements in CSS and JavaScript.
 
 ### HTML Advence Blog Post 2
+
+You've mastered the basics—<h1>, <p>, <img>. But what comes next? Advanced HTML is about leveraging the full potential of the language to build robust, accessible, and dynamic websites. It's not about learning a new language, but using the tools you have more effectively.
+
+One of the most important concepts is Semantic HTML. Instead of using <div> tags for everything, you use tags that describe their content, like <header>, <nav>, <main>, and <article>. This provides a meaningful structure for screen readers and search engines, making your site more accessible and better for SEO.
+
+aria-\* also use for accesible. But it's have many attribute. Actually we don't memorize code
+
+Another powerful tool is custom data attributes, which allow you to store extra information directly on HTML elements. Using data-\* attributes, you can easily connect your HTML to JavaScript, creating interactive components without cluttering your code.
